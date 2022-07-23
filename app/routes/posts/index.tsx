@@ -19,13 +19,16 @@ export const loader: LoaderFunction = async () => {
 
 const PostList = ({ slug, title, excerpt }: PostListProps) => {
   return (
-    <div className="mb-2">
-      <h2 className="text-md uppercase font-bold border-b border-solid border-black mb-1">
+    <div className="mb-8">
+      <h2 className="text-md uppercase font-bold border-b border-solid border-black mb-4">
         <Link to={slug} className="text-lg uppercase no-underline">
           {title}
         </Link>
       </h2>
-      <main className="prose" dangerouslySetInnerHTML={{ __html: excerpt }} />
+      <main
+        className="prose max-w-none"
+        dangerouslySetInnerHTML={{ __html: excerpt }}
+      ></main>
       <Link className="italic" to={slug}>
         more...
       </Link>

@@ -21,11 +21,11 @@ export default function Index() {
 
         <div className="mb-4">
           <h2 className=" mb-4">Quick Introduction:</h2>
-          <div className="prose">
+          <div className="prose max-w-none">
             <p>
               Greetings! My name is Theo Budiyanto. I grew up in Indonesia,
               before I made my way and graduated from UC Berkeley. Then, I had a
-              brief stint working as a Software enginieer in Bay Area before
+              brief stint working as a Software engineer in Bay Area before
               finally coming back to where I came from.
             </p>
             <p>
@@ -42,9 +42,16 @@ export default function Index() {
           </h2>
           <div className="flex flex-row justify-between mb-1">
             <div>
+              Backend at <a href="https://rainbow.me">Rainbow</a>
+            </div>
+            <div>2022-current</div>
+          </div>
+
+          <div className="flex flex-row justify-between mb-1">
+            <div>
               CTO at <a href="https://delman.io">Delman</a>
             </div>
-            <div>2018-Current</div>
+            <div>2018-2022</div>
           </div>
           <div className="flex flex-row justify-between">
             <div>

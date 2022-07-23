@@ -7,6 +7,7 @@ import { marked } from "marked";
 export type PostMarkdownAttributes = {
   title: string;
   date: string;
+  excerpts: string;
 };
 function isValidPostAttributes(
   attributes: any
@@ -26,15 +27,14 @@ export async function getPosts() {
       })
       .map(async (filename) => {
         const file = await fs.readFile(path.join(postsPath, filename));
-        const { attributes, body } = parseFrontMatter(file.toString());
+        const { attributes } = parseFrontMatter(file.toString());
 
         invariant(isValidPostAttributes(attributes));
-        const excerpt = marked(body.slice(0, 500) + " ...");
         return {
           slug: filename.replace(/\.md$/, ""),
           title: attributes.title,
           date: attributes.date,
-          excerpt,
+          excerpt: attributes.excerpts,
         };
       })
   );
@@ -54,5 +54,6 @@ export async function getPost(slug: string) {
     body: html,
     title: attributes.title,
     date: attributes.date,
+    excerpts: attributes.excerpts,
   };
 }

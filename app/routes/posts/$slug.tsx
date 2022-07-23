@@ -19,7 +19,10 @@ export default function Post() {
         <h2 className="font-normal no-underline border-0">{post.date}</h2>
       </Hero>
 
-      <main className="prose" dangerouslySetInnerHTML={{ __html: post.body }} />
+      <main
+        className="prose max-w-none mt-2"
+        dangerouslySetInnerHTML={{ __html: post.body }}
+      />
     </div>
   );
 }

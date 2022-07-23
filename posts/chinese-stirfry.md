@@ -1,6 +1,7 @@
 ---
 title: Chinese Stir fry
 date: 24-12-2020
+excerpts: Who knows cooking can be functional?
 ---
 
 ![Jayden Smith stir frying](https://media.giphy.com/media/x4bYDf0QY441ooCgEr/giphy.gif)
