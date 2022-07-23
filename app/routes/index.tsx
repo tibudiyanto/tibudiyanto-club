@@ -44,7 +44,7 @@ export default function Index() {
             <div>
               Backend at <a href="https://rainbow.me">Rainbow</a>
             </div>
-            <div>2022-current</div>
+            <div>2022-curr</div>
           </div>
 
           <div className="flex flex-row justify-between mb-1">
